@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4909FDB821934A2400D5B55A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909FDB721934A2400D5B55A /* AppDelegate.swift */; };
-		4909FDBA21934A2400D5B55A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909FDB921934A2400D5B55A /* ViewController.swift */; };
 		4909FDBD21934A2500D5B55A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4909FDBB21934A2500D5B55A /* Main.storyboard */; };
 		4909FDBF21934A2600D5B55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4909FDBE21934A2600D5B55A /* Assets.xcassets */; };
 		4909FDC221934A2600D5B55A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4909FDC021934A2600D5B55A /* LaunchScreen.storyboard */; };
+		49AD272B2194990B00894187 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD272A2194990B00894187 /* MainTableViewController.swift */; };
+		49AD272D2194992300894187 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD272C2194992300894187 /* ItemTableViewCell.swift */; };
+		49AD273121949B6000894187 /* AppStoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD273021949B6000894187 /* AppStoreItem.swift */; };
+		49AD273321949B6A00894187 /* AppStoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AD273221949B6A00894187 /* AppStoreItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4909FDB421934A2400D5B55A /* AppleSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4909FDB721934A2400D5B55A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4909FDB921934A2400D5B55A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4909FDBC21934A2500D5B55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4909FDBE21934A2600D5B55A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4909FDC121934A2600D5B55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4909FDC321934A2600D5B55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AD272A2194990B00894187 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		49AD272C2194992300894187 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		49AD273021949B6000894187 /* AppStoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreItem.swift; sourceTree = "<group>"; };
+		49AD273221949B6A00894187 /* AppStoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,48 @@
 			isa = PBXGroup;
 			children = (
 				4909FDB721934A2400D5B55A /* AppDelegate.swift */,
-				4909FDB921934A2400D5B55A /* ViewController.swift */,
+				49AD273421949B8300894187 /* Model */,
+				49AD273521949B8D00894187 /* Model Controller */,
+				49AD272E2194994400894187 /* Views + Controllers */,
+				49AD272F2194997E00894187 /* Resources */,
+			);
+			path = AppleSearch;
+			sourceTree = "<group>";
+		};
+		49AD272E2194994400894187 /* Views + Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49AD272A2194990B00894187 /* MainTableViewController.swift */,
+				49AD272C2194992300894187 /* ItemTableViewCell.swift */,
 				4909FDBB21934A2500D5B55A /* Main.storyboard */,
+			);
+			path = "Views + Controllers";
+			sourceTree = "<group>";
+		};
+		49AD272F2194997E00894187 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				4909FDBE21934A2600D5B55A /* Assets.xcassets */,
 				4909FDC021934A2600D5B55A /* LaunchScreen.storyboard */,
 				4909FDC321934A2600D5B55A /* Info.plist */,
 			);
-			path = AppleSearch;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		49AD273421949B8300894187 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49AD273021949B6000894187 /* AppStoreItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49AD273521949B8D00894187 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49AD273221949B6A00894187 /* AppStoreItemController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4909FDBA21934A2400D5B55A /* ViewController.swift in Sources */,
+				49AD273321949B6A00894187 /* AppStoreItemController.swift in Sources */,
+				49AD272B2194990B00894187 /* MainTableViewController.swift in Sources */,
+				49AD272D2194992300894187 /* ItemTableViewCell.swift in Sources */,
+				49AD273121949B6000894187 /* AppStoreItem.swift in Sources */,
 				4909FDB821934A2400D5B55A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AppleSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AppleSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
